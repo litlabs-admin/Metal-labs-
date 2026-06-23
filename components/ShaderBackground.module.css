@@ -21,7 +21,7 @@
   border-radius: inherit;
   z-index: 1;
   /* Deepen the grays toward black (waves read slightly too gray otherwise). */
-  filter: brightness(0.8) contrast(1.05);
+  filter: brightness(0.65) contrast(1.05);
 }
 
 /* Chrome metal ball — transparent PNG layered on top of the waves, anchored
