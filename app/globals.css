@@ -2,7 +2,7 @@
 :root {
   --token-bg: #f2f1f0; /* --token-1a970736 : page background */
   --token-white: #ffffff; /* --token-bcec9f1b */
-  --token-grey: #fffc; /* --token-83d5cfaa : subtitle / badge / disclaimer */
+  --token-grey: rgba(0, 0, 0, 0.6); /* --token-83d5cfaa : subtitle / badge / disclaimer */
   --token-dark: #050505; /* --token-9d350d56 : button bg / input text */
   --token-placeholder: #4f4f4f; /* --token-72f0347a : input placeholder */
   --framer-link-text-color: #09f;

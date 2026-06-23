@@ -30,9 +30,6 @@ function EmailForm({ variant }: { variant: "desktop" | "phone" }) {
           <span className={styles.submitText}>Get early access</span>
         </button>
       </form>
-      <p className={styles.disclaimer}>
-        First 1,000 on the waitlist get a year free
-      </p>
     </div>
   );
 }
@@ -71,12 +68,8 @@ export default function Hero() {
               transition={{ duration: 0.4, delay: 0.4, ease: EASE_TEXT }}
             >
               <h1 className={styles.headline}>
-                Turn your voice memos into music
+                The most human like agent ever
               </h1>
-              <p className={styles.subheadline}>
-                Hum a melody, sing a line, or just talk through an idea. String
-                turns recordings into finished songs.
-              </p>
             </motion.div>
 
             {/* Email form — y:10 → 0, opacity, 0.6s, delay 0.4s */}

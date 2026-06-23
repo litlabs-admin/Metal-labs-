@@ -34,6 +34,9 @@ export default function ShaderBackground() {
         draggable={false}
       />
 
+      {/* Soft white scrim — lifts the central text onto near-white */}
+      <div className={styles.scrim} aria-hidden="true" />
+
       {/* Chrome metal ball — separate layer on top of the waves (transparent
           PNG, so the waves show around/through it), anchored low-center and
           gently floating. Wrapper handles position; inner img owns the float. */}
