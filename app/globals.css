@@ -1,0 +1,49 @@
+/* ── Framer design tokens (verbatim hex values from the original export) ── */
+:root {
+  --token-bg: #f2f1f0; /* --token-1a970736 : page background */
+  --token-white: #ffffff; /* --token-bcec9f1b */
+  --token-grey: #fffc; /* --token-83d5cfaa : subtitle / badge / disclaimer */
+  --token-dark: #050505; /* --token-9d350d56 : button bg / input text */
+  --token-placeholder: #4f4f4f; /* --token-72f0347a : input placeholder */
+  --framer-link-text-color: #09f;
+}
+
+/* ── Reset (mirrors the original Framer base styles) ── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure {
+  margin: 0;
+}
+
+body {
+  background: var(--token-bg);
+  font-family: var(--font-onest), sans-serif;
+  /* hero is full-viewport; no scroll content in this hero-only build */
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+}

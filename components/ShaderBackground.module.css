@@ -1,0 +1,76 @@
+/* Agenciy "metal ball + waves" hero background layers. */
+
+.root {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  overflow: hidden;
+}
+
+/* Full-bleed animated dot-wave field */
+.video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border-radius: inherit;
+  z-index: 1;
+  /* Deepen the grays toward black (waves read slightly too gray otherwise). */
+  filter: brightness(0.8) contrast(1.05);
+}
+
+/* Chrome metal ball — transparent PNG layered on top of the waves, anchored
+   low-center, large, only lightly cropped at the bottom.
+   Tune size via `.ballWrap width`, crop via `.ballWrap bottom`. */
+.ballWrap {
+  position: absolute;
+  left: 50%;
+  bottom: -40px;
+  transform: translateX(-50%);
+  width: min(1080px, 86vw);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.ball {
+  display: block;
+  width: 100%;
+  height: auto;
+  will-change: transform;
+}
+
+/* Gentle float + slight sway (no fake spin of the baked-lighting render). */
+@media (prefers-reduced-motion: no-preference) {
+  .ball {
+    animation: ballFloat 7s ease-in-out infinite;
+  }
+}
+
+@keyframes ballFloat {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(-1.5deg);
+  }
+}
+
+/* Center Light — soft white glow (mirrors Framer's "Center Light": blur 70px,
+   ~195x72, positioned low-center). Sits behind the video. */
+.glow {
+  position: absolute;
+  left: 50%;
+  top: 62%;
+  width: 195px;
+  height: 72px;
+  transform: translateX(-50%);
+  background-color: #fff;
+  filter: blur(70px);
+  z-index: 0;
+}
